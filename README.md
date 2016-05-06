@@ -5,7 +5,7 @@ A web app that asks true/false questions and displays the results.
 Usage:
   1)  Install Node.js and mongoDBif you haven't already. 
   
-  2)Clone the project and run npm install inside the project folder
+  2)  Clone the project and run npm install inside the project folder
   
   3) run mongod if it's not running already
   
@@ -13,7 +13,11 @@ Usage:
   
   5)  There's no frontend for uploading questions yet so you'll have to get 
       a litlle technical. Using Postman or any other api testing/request sending app
-      of your choosing, send form-data in a POST request to http://webct.net:8180/api/questions.
+      of your choosing, send form-data in a POST request to webAdress:8180/api/questions.
+      If you're running locally that's:
+      
+      localhost:8180/api/questions
+      
       The form needs just one key/value pair in the format:
       
       question: Enter question here. (Note: the key must be "question")
