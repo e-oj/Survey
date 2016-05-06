@@ -17,7 +17,9 @@ Usage:
       If you're running locally that's:
       
       url: localhost:8180/api/questions
-
+      
+      Key/value pair:
+      
       question: Enter question here. (Note: the key must be "question")
   
   3)  Using a web browser, go to webAdress:8180/form (Note: the port number can be changed in config.js).
