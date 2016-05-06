@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fill It!!</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="assets/libs/jquery-2.1.3.js"></script>
+
+    <script src="assets/libs/angular.js"></script>
+    <script src="assets/libs/angular-resource.js"></script>
+
+    <script src="app/app.js"></script>
+
+    <script src="app/services/constantService.js"></script>
+    <script src="app/services/questionService.js"></script>
+
+    <script src="app/directives/question.js"></script>
+    <script src="app/directives/response.js"></script>
+</head>
+<body ng-app="app">
+    <div ng-controller="appCtrl as appCt">
+        <div class="prompt-div"  ng-show="!appCt.hasName && !appCt.answerMode">
+            <form class="name-prompt" ng-submit="appCt.submit()">
+                <label>
+                    <input type="text" class="name-input" ng-model="appCt.firstName" placeholder="First Name" size="40">
+                </label>
+                <label>
+                    <input type="text" class="name-input" ng-model="appCt.lastName" size="40" placeholder="Last Name">
+                </label>
+
+                <br>
+                <input type="submit" value="Submit" class="name-submit">
+            </form>
+            <p class="error" ng-show="appCt.failed">An error occurred. Please try again</p>
+        </div>
+        <oj-question
+            ng-repeat="question in appCt.questions.result"
+            oj-query-id="{{question._id}}"
+            oj-query="{{question.question}}"
+            ng-show="appCt.hasName && !appCt.answerMode"
+        ></oj-question>
+
+        <button ng-show="appCt.hasName && !appCt.answerMode"
+                ng-click="appCt.answerMode = true"
+                class="name-submit see-ans"
+        >See Answers</button>
+
+        <div ng-show="appCt.answerMode">
+            <oj-response
+                    ng-repeat="question in appCt.questions.result"
+                    oj-query-id="{{question._id}}"
+                    oj-query="{{question.question}}"
+            ></oj-response>
+        </div>
+    </div>
+</body>
+</html>

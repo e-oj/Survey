@@ -1,0 +1,18 @@
+<div class="quest-prompt">
+    <p class="question"></p>
+    <form class="response-form">
+        <label>
+            <input ng-disabled="questCt.kill" type="radio" ng-model="questCt.response" ng-value="true">
+            true
+        </label>
+
+        <label>
+            <input ng-disabled="questCt.kill" type="radio" ng-model="questCt.response" ng-value="false">
+            false
+        </label>
+
+        <button ng-disabled="questCt.kill" ng-click="questCt.submit()" class="name-submit  ans-submit">Submit</button>
+        <p class="error" ng-show="questCt.failed">An error occurred. Please try again</p>
+        <p class="success" ng-show="questCt.success">Submitted</p>
+    </form>
+</div>
