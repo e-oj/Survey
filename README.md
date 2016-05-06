@@ -13,14 +13,14 @@ Usage:
   
   5)  There's no frontend for uploading questions yet so you'll have to get 
       a litlle technical. Using Postman or any other api testing/request sending app
-      of your choosing, send form-data in a POST request to webAdress:8180/api/questions.
-      If you're running locally that's:
+      of your choosing, send form-data containing a key/value pair in a POST 
+      request to webAdress:8180/api/questions. It should look like:
       
-      url: localhost:8180/api/questions
+      url (If running locally): 
+        localhost:8180/api/questions
       
       Key/value pair:
-      
-      question: Enter question here. (Note: the key must be "question")
+        question: Enter question here. (Note: the key must be "question")
   
   3)  Using a web browser, go to webAdress:8180/form (Note: the port number can be changed in config.js).
       If you're running locally, that would be:
