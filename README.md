@@ -16,11 +16,8 @@ Usage:
       of your choosing, send form-data in a POST request to webAdress:8180/api/questions.
       If you're running locally that's:
       
-      localhost:8180/api/questions
-      
-      The form needs just one key/value pair in the following format:
-      Note: "Enter question here is a placeholder"
-      
+      url: localhost:8180/api/questions
+
       question: Enter question here. (Note: the key must be "question")
   
   3)  Using a web browser, go to webAdress:8180/form (Note: the port number can be changed in config.js).
