@@ -17,7 +17,9 @@ Usage:
       If you're running locally that's:
       
       localhost:8180/api/questions
-      The form needs just one key/value pair in the format:
+      
+      The form needs just one key/value pair in the following format:
+      Note: "Enter question here is a placeholder"
       
       question: Enter question here. (Note: the key must be "question")
   
