@@ -56,5 +56,25 @@ module.exports = function(Question) {
     });
   });
 
+  questionRouter.delete("/:id", function(req, res){
+    var questId = req.params.id;
+
+    Question.remove({_id: questId}, function(err, question){
+      if(err){
+        res.status(500);
+        return res.json({
+          success: false
+          , message: "@questionRouter: Error finding questions"
+        });
+      }
+
+      res.status(200);
+      res.json({
+        success: true
+        , result: question
+      });
+    });
+  });
+
   return questionRouter;
 };
