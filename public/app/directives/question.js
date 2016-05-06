@@ -28,7 +28,7 @@ angular.module("Question", ["ngResource", "ConstFactory"])
           var question = self.ojQueryId;
           var response = self.response;
 
-          if(!response){
+          if(response == null){
             self.failed = true;
             self.kill = false;
             return;
