@@ -27,6 +27,12 @@ angular.module("Question", ["ngResource", "ConstFactory"])
           var author = $window.localStorage.getItem("userId");
           var question = self.ojQueryId;
           var response = self.response;
+
+          if(!response){
+            self.failed = true;
+            self.kill = false;
+            return;
+          }
           
           res.save({}, {
             author: author
