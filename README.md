@@ -3,7 +3,8 @@
 A web app that asks true/false questions and displays the results.
 
 Usage:
-  1)  Install Node.js and mongoDBif you haven't already. 
+
+  1)  Install Node.js and mongoDB if you haven't already. 
   
   2)  Clone the project and run npm install inside the project folder
   
