@@ -1,6 +1,6 @@
 # Survey
 
-A web app that asks true/false questions and displays the results.
+A web app that asks true/false questions and displays the results. (will be expanded to include user accounts)
 
 Usage:
 
