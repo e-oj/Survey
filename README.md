@@ -1,7 +1,6 @@
 # Survey
 
-A (very basic) web app that asks true/false questions and displays the results. (will be expanded to include user accounts)
-
+A (very basic) web app that asks true/false questions and displays the results.
 Usage:
 
   1)  Install Node.js and mongoDB if you haven't already. 
