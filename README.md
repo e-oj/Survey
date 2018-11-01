@@ -29,4 +29,3 @@ Usage:
   
   4)  It's done!! People can now provide their names and proceed to take the survey
 
-See a working version at http://webct.net:8180/form
